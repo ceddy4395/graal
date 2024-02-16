@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014, 2019, Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2014, 2024, Oracle and/or its affiliates. All rights reserved.
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
  *
  * The Universal Permissive License (UPL), Version 1.0
@@ -46,12 +46,13 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Informational only. Used to provide information about the base type of a type mentioned in a
- * System Java annotation. Currently use with {@link CPointerTo} to inform about the base primitive
- * type of the type pointed to.
+ * Informational only. Used to document the base type of a type mentioned in a System Java
+ * annotation. Currently use with {@link CPointerTo} to inform about the base primitive type of the
+ * type pointed to.
  *
  * @since 19.0
  */
+@Deprecated(since = "24.1", forRemoval = true)
 @Retention(RetentionPolicy.SOURCE)
 @Target({ElementType.TYPE})
 public @interface CTypedefOfInfo {
